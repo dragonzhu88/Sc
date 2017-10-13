@@ -1,0 +1,25 @@
+
+/*重置代码*/
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	color: #fdfdfc;
+	font-family: "微软雅黑";
+}
+
+li{list-style: none;}
+
+a{
+	text-decoration: none;
+	color: #fdfdfc;
+	display: block;
+}
+
+i{
+	font-style: normal;
+}
+
+

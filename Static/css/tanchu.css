@@ -1,0 +1,161 @@
+﻿.reveal-modal-bg {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-color: #000;
+	z-index: 100;
+	display: none;
+	top: 0;
+	left: 0
+}
+
+.kaishi1 {
+	border-radius: 2px;
+	position: fixed;
+	top: 220px;
+	visibility: visible;
+	display: none;
+	font-family: "微软雅黑";
+	background-color: #fff;
+	width: 805px;
+	height: auto;
+	background: #1c1c1c;
+	border: solid 1px #3b3b3b;
+	padding-bottom: 20px;
+	left:50%;
+	margin-left:-400px;
+}
+
+.kaishi1 .tc {
+	color: #fff;
+	line-height: 36px;
+	font-size: 15px;
+	font-family: "微软雅黑";
+	padding-left: 30px;
+	padding-right: 30px;
+	height: 440px;
+	margin-top: 50px
+}
+
+.kaishi1 .close {
+	background: url(/sc/Static/img/gb.png) no-repeat center top;
+	cursor: pointer;
+	width: 36px;
+	height: 36px;
+	color: #fff;
+	float: right;
+	margin-right: 4px;
+	margin-top: -1px;
+	text-align: center;
+	font-size: 22px;
+	font-family: "微软雅黑"
+}
+
+.kaishi1 .title {
+	background: url(../img/ttg_03.jpg) center top;
+	height: 33px;
+	width: 804px;
+	border: solid 1px #3b3b3b;
+	color: #fff;
+	font-size: 16px;
+	line-height: 33px;
+	text-indent: 25px
+}
+
+.kaishi1 .form_s {
+	width: 765px;
+	margin-left: 24px;
+	margin-top: 30px
+}
+
+.kaishi1 .form_s .table1 {
+	width: 760px;
+	color: #fff;
+	margin-bottom: 35px;
+	float: left
+}
+
+.kaishi1 .form_s .table1 dl {
+	width: 180px;
+	background: #033e2c;
+	float: left;
+	margin-left: -1px;
+	color: #fff
+}
+
+.kaishi1 .form_s .table1 dl font {
+	color: #fff391
+}
+
+.kaishi1 .form_s .table1 dt {
+	width: 180px;
+	height: 30px;
+	background: #793d3d;
+	float: left;
+	text-align: center;
+	line-height: 30px;
+	border: solid 1px #8a5656;
+	margin-top: -1px;
+	font-size: 14px
+}
+
+.kaishi1 .form_s .table1 dd {
+	width: 180px;
+	height: 30px;
+	background: #1c1c1c;
+	float: left;
+	text-align: center;
+	line-height: 30px;
+	border: solid 1px #393939;
+	margin-top: -1px;
+	font-size: 14px;
+}
+
+.kaishi1 .form_s .table1 .y5 {
+	width: 402px
+}
+
+.kaishi1 .form_s .table1 .y5 dt {
+	width: 401px
+}
+
+.kaishi1 .form_s .table1 .y5 dd {
+	width: 401px
+}
+
+.kaishi1 .form_s .table1 .y4 {
+	width: 222px
+}
+
+.kaishi1 .form_s .table1 .y4 dt {
+	width: 222px
+}
+
+.kaishi1 .form_s .table1 .y4 dd {
+	width: 222px
+}
+
+.kaishi1 .form_s .cxt {
+	width: auto;
+	height: 35px;
+	line-height: 35px;
+	padding-left: 30px;
+	padding-right: 30px;
+	font-size: 14px;
+	margin-bottom: 35px;
+	float: left;
+	background-color: #333;
+	border-radius: 18px;
+	color: #fff;
+	letter-spacing: 2.2px;
+	font-family: "微软雅黑";
+	clear: both;
+	margin-left: 300px
+}
+
+.qx {
+	display: block;
+	width: 100%;
+	padding-bottom: 50px;
+	text-align: center
+}
