@@ -9,6 +9,12 @@ class IndexController extends Controller
     public function index()
     {
         $dbData = D('bet_level')->select();
+        foreach ($dbData as $k => $v){
+            $dbData[$k]['bet_total'] = floatval($v['bet_total']);
+            $dbData[$k]['grade_gift'] = floatval($v['grade_gift']);
+            $dbData[$k]['week_gift'] = floatval($v['week_gift']);
+            $dbData[$k]['month_gift'] = floatval($v['month_gift']);
+        }
         $this->assign('list', $dbData);
         $this->display();
     }
@@ -24,6 +30,12 @@ class IndexController extends Controller
             $whereData['bet_total'] = ['ELT', $sum_bet];
             $whereData['bet_total_max'] = ['egt', $sum_bet];
             $result = D('bet_level')->where($whereData)->select();
+            foreach ($result as $k => $v){
+                $result[$k]['bet_total'] = floatval($v['bet_total']);
+                $result[$k]['grade_gift'] = floatval($v['grade_gift']);
+                $result[$k]['week_gift'] = floatval($v['week_gift']);
+                $result[$k]['month_gift'] = floatval($v['month_gift']);
+            }
             if($result){
                 $ret['code'] = 200;
                 $ret['msg'] = '请求成功';

@@ -137,7 +137,7 @@
                         <foreach name="list" item="vo" >
                             <tr>
                                 <td>
-                                    <a href="#">{$vo['gread']}</a>
+                                    <a href="#">{$vo['gread']}级</a>
                                 </td>
                                 <td>{$vo['bet_total']}</td>
                                 <td>{$vo['grade_gift']}</td>
@@ -582,20 +582,17 @@
             cache: false,
             dataType: 'json',//数据格式为json,定义这个格式data不用转成对象
             success: function (data) {
-                console.log(data)
                 if(data.code == 200){
                     var text = ''
-                        for(var i in data.data){
-                            data.data[i].is_vip= data.data[i].is_vip==1?'是':'否';
-                            data.data[i].customer_service= data.data[i].customer_service==1?'是':'否';
-                            data.data[i].accelerate= data.data[i].accelerate==1?'是':'否';
-                            data.data[i].one_on_one= data.data[i].one_on_one==1?'是':'否';
-                            text += '<tr></tr><td>' + data.data[i].id + '</td>'+'<td>' + data.data[i].gread + '</td>'+'<td>' + data.data[i].bet_total + '</td>'+ '<td>' + data.data[i].bet_total_max + '</td>'+'<td>' + data.data[i].grade_gift + '</td>' +'<td>' + data.data[i].week_gift + '</td>'
-                                + '<td>' + data.data[i].month_gift + '</td>'+'<td>' + data.data[i].is_vip + '</td>'+'<td>' + data.data[i].customer_service + '</td>'+'<td>' + data.data[i].accelerate + '</td>'
-                                + '<td>' + data.data[i].one_on_one + '</td>' + '</tr>'
+                    for(var i in data.data){
+//                        data.data[i].is_vip= data.data[i].is_vip==1?'是':'否';
+//                        data.data[i].customer_service= data.data[i].customer_service==1?'是':'否';
+//                        data.data[i].accelerate= data.data[i].accelerate==1?'是':'否';
+//                        data.data[i].one_on_one= data.data[i].one_on_one==1?'是':'否';
+                        text += '<tr><td>' + data.data[i].gread + '级</td>'+'<td>' + data.data[i].week_gift + '</td>'
+                            + '<td>' + data.data[i].month_gift + '</td></tr>'
                     }
-                    var html = '<table class="msg_table">' + '<tr><th>ID</th><th>晋升标准等级</th><th>最低打码</th><th>最高打码</th><th>等级礼金</th><th>周俸禄</th><th>月俸禄</th><th>荣升VIP</th><th>24小时服务</th><th>存取款加速通道</th><th>一对一客服经理</th></tr>' + text + '</table>'
-                   console.log(html)
+                    var html = '<table class="msg_table">' + '<tr><th>晋升标准等级</th><th>周俸禄</th><th>月俸禄</th></tr>' + text + '</table>'
                     $('#queryFrame').html(html)
                 }else{
                     alert(data.msg)
@@ -618,11 +615,11 @@
         });
         new Scroll(document.getElementById("msgNews"));
         /**公告*/
-       /* $.get('ads.php',function(data){
-            var sHtml = data;
-            $("#msgNews").html(sHtml);
-            new Scroll(document.getElementById("msgNews"));
-        });*/
+        /* $.get('ads.php',function(data){
+         var sHtml = data;
+         $("#msgNews").html(sHtml);
+         new Scroll(document.getElementById("msgNews"));
+         });*/
 
         $('.close').click(function(){
             $(".reveal-modal-bg").css("display","none");
@@ -708,7 +705,7 @@
     });
 </script>
 <script>
-//    document.writeln("<script type='text/javascript' src='http://swt.bexvwk.tech/pp/pinpai.php?id=470&tid=" + new Date().getTime() + "' charset='utf-8'><\/script>");
+    //    document.writeln("<script type='text/javascript' src='http://swt.bexvwk.tech/pp/pinpai.php?id=470&tid=" + new Date().getTime() + "' charset='utf-8'><\/script>");
 </script>
 <!--<script type="text/javascript" src="/Sc/Static/img/pinpai.php" charset="utf-8"></script>-->
 <div style="position: static; display: none; width: 0px; height: 0px; border: none; padding: 0px; margin: 0px;">

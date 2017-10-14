@@ -1,18 +1,16 @@
 
 .app{
-	width: 1920px;
-	min-height: 2988px;
+	width: 100%;
 	position: absolute;
 	top: 0;
-	left: 50%;
-	margin-left: -960px;
+	/* left: 50%; */
+	/* margin-left: -960px; */
 	background: url(../img/bg.jpg) no-repeat;
 	background-color: #030512;
 	overflow: hidden;
 }
 
 .app .content{
-	width: 1140px;
 	overflow: hidden;
 	margin: 0 auto;
 }
@@ -30,9 +28,12 @@
 
 .app .header h1{
 	margin: 19px 0 0 19px;
-	width: 278px;
+	/*width: 278px;*/
 	height: 67px;
+	width: 13rem;
 	background-image: url(../img/logo.png);
+	background-repeat: no-repeat;
+	background-size: 13rem;
 	float: left;
 	text-indent: -99em;
 }
@@ -73,13 +74,12 @@
 
 /*banner*/
 .banner{
-	width: 1920px;
-	height: 595px;
 	background: url(/Sc/Static/img/banner.jpg) no-repeat;
+	background-position: center top;
 }
 
 .banner .search{
-	width: 596px;
+	/*width: 596px;*/
 	height: 54px;
 	line-height: 54px;
 	overflow: hidden;
@@ -88,7 +88,7 @@
   	-webkit-border-radius: 54px; /* Safari 和 Chrome */
   	border-radius: 54px;
 	background-color: #55091d;
-	margin: 454px auto 0;
+	margin: 31rem auto 0;
 }
 
 .banner .search p{
@@ -111,7 +111,7 @@
 }
 
 .banner .search .inp{
-	width: 296px;
+	/*width: 296px;*/
 	height: 34px;
 	overflow: hidden;
 	padding:0 22px;
@@ -133,7 +133,7 @@ input:focus, textarea:focus, keygen:focus, select:focus {
 }
 
 .banner .search a{
-	width: 105px;
+	/*width: 105px;*/
 	height: 37px;
 	background-image: url(../img/ban_03.png);
 	float: right;
@@ -184,14 +184,16 @@ input:focus, textarea:focus, keygen:focus, select:focus {
 }
 
 .main .bar{
-	width: 1134px;
 	height: 45px;
 	margin: 0 auto;
 	background-image: url(../img/hong.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 98%;
+	width: 100%;
 }
 
 .main .mainbox{
-	width: 1074px;
 	padding: 0 10px 44px;
 	min-height: 500px;
 	border: 3px solid #bd8418;
@@ -201,6 +203,7 @@ input:focus, textarea:focus, keygen:focus, select:focus {
 	background-color: #070a1a;
 	margin: 0 auto;
 	overflow: hidden;
+	margin: 0 1.6rem;
 }
 
 .main .mainbox .dh{
@@ -228,6 +231,7 @@ input:focus, textarea:focus, keygen:focus, select:focus {
 
 .app .biaoge table{
 	display: table;
+	width: 100%;
     border-collapse: separate;
     border-spacing: 0px;
     border-color: #1152e4;
@@ -254,11 +258,11 @@ input:focus, textarea:focus, keygen:focus, select:focus {
 }
 
 #bg th{
-	width: 119px
+	/*width: 119px*/
 }
 
 .app .biaoge tr{
-	width: 119px;
+	/*width: 119px;*/
 	height: 38px;
 }
 
@@ -296,7 +300,7 @@ input:focus, textarea:focus, keygen:focus, select:focus {
 /*隐藏框css*/
 .hide{
 	padding: 0 31px;
-	width: 1078px;
+	/*width: 1078px;*/
 	height: 396px;
 	border: 3px solid #bd8418;
 	background-color: #08132c;
@@ -323,7 +327,7 @@ input:focus, textarea:focus, keygen:focus, select:focus {
 }
 
 .hide .hide-div{
-	width: 364px;
+	/*width: 364px;*/
 	height: 30px;
 	line-height: 30px;
 	text-align: center;
