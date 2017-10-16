@@ -11,10 +11,35 @@ class IndexController extends Controller
     {
         $dbData = D('bet_level')->select();
         foreach ($dbData as $k => $v){
-            $dbData[$k]['bet_total'] = floatval($v['bet_total']);
-            $dbData[$k]['grade_gift'] = floatval($v['grade_gift']);
-            $dbData[$k]['week_gift'] = floatval($v['week_gift']);
-            $dbData[$k]['month_gift'] = floatval($v['month_gift']);
+            if(floatval($v['bet_total'] > 10000)){
+                $dbData[$k]['bet_total'] = strval(floatval($v['bet_total'])/10000).'万';
+            } else{
+                $dbData[$k]['bet_total'] = floatval($v['bet_total']);
+            }
+
+            if(floatval($v['bet_total_max'] > 10000)){
+                $dbData[$k]['bet_total_max'] = strval(floatval($v['bet_total_max'])/10000).'万';
+            } else{
+                $dbData[$k]['bet_total_max'] = floatval($v['bet_total_max']);
+            }
+
+            if(floatval($v['grade_gift'] > 10000)){
+                $dbData[$k]['grade_gift'] = strval(floatval($v['grade_gift'])/10000).'万';
+            } else{
+                $dbData[$k]['grade_gift'] = floatval($v['grade_gift']);
+            }
+
+            if(floatval($v['week_gift'] > 10000)){
+                $dbData[$k]['week_gift'] = strval(floatval($v['week_gift'])/10000).'万';
+            } else{
+                $dbData[$k]['week_gift'] = floatval($v['week_gift']);
+            }
+
+            if(floatval($v['month_gift'] > 10000)){
+                $dbData[$k]['month_gift'] = strval(floatval($v['month_gift'])/10000).'万';
+            } else{
+                $dbData[$k]['month_gift'] = floatval($v['month_gift']);
+            }
         }
         $this->assign('list', $dbData);
         $this->display();
@@ -32,10 +57,35 @@ class IndexController extends Controller
             $whereData['bet_total_max'] = ['egt', $sum_bet];
             $result = D('bet_level')->where($whereData)->select();
             foreach ($result as $k => $v){
-                $result[$k]['bet_total'] = floatval($v['bet_total']);
-                $result[$k]['grade_gift'] = floatval($v['grade_gift']);
-                $result[$k]['week_gift'] = floatval($v['week_gift']);
-                $result[$k]['month_gift'] = floatval($v['month_gift']);
+                if(floatval($v['bet_total'] > 10000)){
+                    $dbData[$k]['bet_total'] = strval(floatval($v['bet_total'])/10000).'万';
+                } else{
+                    $dbData[$k]['bet_total'] = floatval($v['bet_total']);
+                }
+
+                if(floatval($v['bet_total_max'] > 10000)){
+                    $dbData[$k]['bet_total_max'] = strval(floatval($v['bet_total_max'])/10000).'万';
+                } else{
+                    $dbData[$k]['bet_total_max'] = floatval($v['bet_total_max']);
+                }
+
+                if(floatval($v['grade_gift'] > 10000)){
+                    $dbData[$k]['grade_gift'] = strval(floatval($v['grade_gift'])/10000).'万';
+                } else{
+                    $dbData[$k]['grade_gift'] = floatval($v['grade_gift']);
+                }
+
+                if(floatval($v['week_gift'] > 10000)){
+                    $dbData[$k]['week_gift'] = strval(floatval($v['week_gift'])/10000).'万';
+                } else{
+                    $dbData[$k]['week_gift'] = floatval($v['week_gift']);
+                }
+
+                if(floatval($v['month_gift'] > 10000)){
+                    $dbData[$k]['month_gift'] = strval(floatval($v['month_gift'])/10000).'万';
+                } else{
+                    $dbData[$k]['month_gift'] = floatval($v['month_gift']);
+                }
             }
             if($result){
                 $ret['code'] = 200;
