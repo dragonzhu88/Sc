@@ -134,8 +134,10 @@ input:focus, textarea:focus, keygen:focus, select:focus {
 
 .banner .search a{
 	/*width: 105px;*/
+	width: 8rem;
 	height: 37px;
 	background-image: url(../img/ban_03.png);
+	background-repeat: no-repeat;
 	float: right;
 	margin-top: 10px;
 	margin-right: 10px;
